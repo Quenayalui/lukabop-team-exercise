@@ -1,0 +1,82 @@
+/* ==================================
+ * FONTS
+ * ================================== */
+ @font-face {
+    font-family: "Helvetica Rounded LT Std Blk"; /*font name*/
+    src: url("fonts/HelveticaRoundedLTStd-Black.otf"); /*URL to font*/
+}
+@font-face {
+    font-family: "Helvetica Rounded LT Std BdCn"; /*font name*/
+    src: url("fonts/HelveticaRoundedLTStd-BdCn.otf"); /*URL to font*/
+}
+@font-face {
+    font-family: "Helvetica Rounded LT Roman"; /*font name*/
+    src: url("fonts/Helvetica\ Textbook\ LT\ Roman.ttf"); /*URL to font*/
+}
+/* ==================================
+ * VARIABLES
+ * ================================== */
+:root{
+    /* font-families */
+    --font-family-black: "Helvetica Rounded LT Std Blk";
+    --font-family-condensed: "Helvetica Rounded LT Std BdCn";
+    --font-family-roman: "Helvetica Rounded LT Roman";
+    /* font-szes */
+    --font-size-xlarge: clamp(32px,5vw,64px);
+    --font-size-large: clamp(32px,3.75vw,64px);
+    --font-size-standard: clamp(20px,5vw,24px);
+    --font-size-small: clamp(16px,5vw,24px);
+    /* colors */
+    --color-text: #000;
+    --color-bg: #FFD234;
+}
+/* ==================================
+ * HEADERS
+ * ================================== */
+
+/* s2 heading and text
+ * s3 navigation items
+ * s4 header
+ * s5 header */
+h2{
+    font-family: var(--font-family-condensed);
+    font-size: var(--font-size-xlarge);
+    color: var(--color-text);
+}
+/* s3 card text
+ * s4 artist names */
+h3{
+    font-family: var(--font-family-black);
+    font-size: var(--font-size-large);
+    color: var(--color-text);
+}
+/* s1 card date
+ * s3 card date
+ * s5 title
+ * footer */
+h4{
+    font-family: var(--font-family-condensed);
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+}
+/* nav-bar cart amount of items, used with h4 
+*/
+.--text-colored{
+    color: var(--color-bg);
+}
+/* s1 card heading
+ * s5 price */
+h5{
+    font-family: var(--font-family-black);
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+}
+/* s1 card text */
+.card-text{
+    font-family: var(--font-family-roman);
+    font-size: var(--font-size-standard);
+    color: var(--color-text);
+}
+/* ==================================
+ * CLASSES
+ * ================================== */
