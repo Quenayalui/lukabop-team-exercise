@@ -34,16 +34,17 @@
  * FONT DEFINING SELECTORS
  * ================================== */
 
-/* s2 heading and text
+/* header navbar items
+ * s2 heading and text
  * s3 navigation items
- * s4 header
- * s5 header */
-h2 {
-  font-family: var(--font-family-condensed);
-  font-size: var(--font-size-xlarge);
-  color: var(--color-text);
-  -webkit-text-stroke: 1px var(--color-text);
-  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
+ * s4 heading
+ * s5 heading */
+h2{
+    font-family: var(--font-family-condensed);
+    font-size: var(--font-size-xlarge);
+    color: var(--color-text);
+    -webkit-text-stroke: 1px var(--color-text);
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
 }
 /* s3 card text
  * s4 artist names */
@@ -56,7 +57,7 @@ h3 {
 }
 /* s1 card date
  * s3 card date
- * s5 title
+ * s5 price 
  * footer */
 h4 {
   font-family: var(--font-family-condensed);
@@ -66,11 +67,12 @@ h4 {
   transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* s1 card heading
- * s5 price */
-h5 {
-  font-family: var(--font-family-black);
-  font-size: var(--font-size-small);
-  color: var(--color-text);
+ * s5 title */
+h5{
+    font-family: var(--font-family-black);
+    font-size: var(--font-size-small);
+    color: var(--color-text);
+    -webkit-text-stroke: 1px var(--color-text);
 }
 /* s1 card text */
 .card-text {
@@ -79,36 +81,173 @@ h5 {
   color: var(--color-text);
 }
 /* ==================================
- * text modifier classes
+ * font modifier classes
  * ================================== */
-/* nav-bar cart amount of items, used with h4 */
-.--text-colored {
-  color: var(--color-bg);
-}
 /* this one is used everywhere where we want the text to turn to just outline on hover */
-.--hover-outline:hover {
-  color: transparent;
-  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
+.--hover-outline:hover{
+    color: var(--color-bg);
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
 }
-/* this one is for text that is by default just the outline*/
-.--outline {
-  color: var(--color-bg);
-  -webkit-text-stroke: 1px var(--color-text);
-  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
+/* this one is for text that is by default just yellow with outline
+ * for home, amount in the cart
+ */
+.--outline{
+    color: var(--color-bg);
+    -webkit-text-stroke: 1px var(--color-text);
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
 }
 /* this is to make that text black again on hover*/
-.--outline:hover {
-  color: var(--color-text);
-  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
+.--outline:hover{
+    color:var(--color-text);
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
 }
+/* ==================================
+ * makes all text black background with yellow letters on selection
+ * ================================== */
+::-moz-selection { /* Code for Firefox */
+    color: var(--color-bg);
+    background-color: var(--color-text);
+  } 
+::selection {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+  }
 /* ==================================
  * SECTIONS
  * ================================== */
-/* footer */
-footer {
-  background-color: var(--color-bg);
-  display: flex;
+/* ==================================
+ * section 3
+ * ================================== */
+ .s3__navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+ }
+ .s3__cards-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+ }
+ .s3__card{
+    border: solid 1px var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    padding: 16px;
+    flex:1;
+    aspect-ratio: 1/1;
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+ }
+ .s3__card-title{
+    font-size: 40px;
+    margin: auto;
+    width:80%;
+    text-align: center;
+    text-transform: uppercase;
+ }
+ .s3__card:hover *{
+    color:#FFF;
+    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+    -webkit-text-stroke: 1px #FFF;
+ }
+/* ==================================
+ * section 4
+ * ================================== */
+ .s4__artists{
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px var(--color-text);
+    border-bottom: solid 1px var(--color-text);
+    padding: 16px 0;
+    gap: 128px;
+ }
+ .s4__artist-names{
+    flex-grow:1;
+ }
+ .s4__artist-images{
+    background-image: url(images/section4/s4_img_1.webp);
+    background-size:cover;
+    background-position: center;
+    width:37vw;
+    min-width: 50vh;
+    min-height:37vw;
+    border: solid 1px var(--color-text);
+ }
+.--s4__artist-name{
+    margin-bottom: 16px;
+    border-bottom: solid 1px var(--color-text);
 }
-.footer-div {
-  width: 50%;
+/* ==================================
+ * section 5
+ * ================================== */
+.section{
+    padding: 64px 16px;
+    background-color: var(--color-bg);
+}
+.section__header{
+    display:flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.s5__cards-container{
+    margin-top: 8px;
+    display:flex;
+    flex-direction: row;
+    gap: 16px;    
+}
+.s5__card{
+    border: solid 1px var(--color-text);
+    height: 40vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    flex: 1 1 min-content;
+    transition: background-color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+}
+.s5__card:hover{
+    background-color: #FFF;
+    transition: background-color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+}
+.s5__card-header{
+    padding: 16px;
+    text-transform: uppercase;
+}
+.s5__card-image{
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+}
+/* modifier classes for individual background images for the cards */
+.--s5__img1{
+    background-image: url(images/s5_img2.webp);
+}
+.--s5__img2{
+    background-image: url(images/s5_img3.webp);
+}
+.--s5__img3{
+    background-image: url(images/s5_img1.webp);
+}
+
+/* ==================================
+ * footer
+ * ================================== */
+footer{
+    background-color: var(--color-bg);
+    display:flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+}
+.footer-div{
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+.--flex-align-right{
+    align-items: end;
+}
+.--align-text-right{
+    text-align: right;
 }
