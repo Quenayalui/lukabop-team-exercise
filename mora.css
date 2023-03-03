@@ -233,7 +233,7 @@ h5{
 /* ==================================
  * footer
  * ================================== */
-footer{
+.footer{
     background-color: var(--color-bg);
     display:flex;
     justify-content: space-between;
