@@ -1,34 +1,34 @@
 /* ==================================
  * FONTS
  * ================================== */
- @font-face {
-    font-family: "Helvetica Rounded LT Std Blk"; /*font name*/
-    src: url("fonts/HelveticaRoundedLTStd-Black.otf"); /*URL to font*/
+@font-face {
+  font-family: "Helvetica Rounded LT Std Blk"; /*font name*/
+  src: url("fonts/HelveticaRoundedLTStd-Black.otf"); /*URL to font*/
 }
 @font-face {
-    font-family: "Helvetica Rounded LT Std BdCn"; /*font name*/
-    src: url("fonts/HelveticaRoundedLTStd-BdCn.otf"); /*URL to font*/
+  font-family: "Helvetica Rounded LT Std BdCn"; /*font name*/
+  src: url("fonts/HelveticaRoundedLTStd-BdCn.otf"); /*URL to font*/
 }
 @font-face {
-    font-family: "Helvetica Rounded LT Roman"; /*font name*/
-    src: url("fonts/Helvetica\ Textbook\ LT\ Roman.ttf"); /*URL to font*/
+  font-family: "Helvetica Rounded LT Roman"; /*font name*/
+  src: url("fonts/Helvetica\ Textbook\ LT\ Roman.ttf"); /*URL to font*/
 }
 /* ==================================
  * VARIABLES
  * ================================== */
-:root{
-    /* font-families */
-    --font-family-black: "Helvetica Rounded LT Std Blk";
-    --font-family-condensed: "Helvetica Rounded LT Std BdCn";
-    --font-family-roman: "Helvetica Rounded LT Roman";
-    /* font-szes */
-    --font-size-xlarge: clamp(32px,5vw,64px);
-    --font-size-large: clamp(32px,3.75vw,64px);
-    --font-size-standard: clamp(20px,5vw,24px);
-    --font-size-small: clamp(16px,5vw,24px);
-    /* colors */
-    --color-text: #000;
-    --color-bg: #FFD234;
+:root {
+  /* font-families */
+  --font-family-black: "Helvetica Rounded LT Std Blk";
+  --font-family-condensed: "Helvetica Rounded LT Std BdCn";
+  --font-family-roman: "Helvetica Rounded LT Roman";
+  /* font-szes */
+  --font-size-xlarge: clamp(32px, 5vw, 64px);
+  --font-size-large: clamp(32px, 3.75vw, 64px);
+  --font-size-standard: clamp(20px, 5vw, 24px);
+  --font-size-small: clamp(16px, 5vw, 24px);
+  /* colors */
+  --color-text: #000;
+  --color-bg: #ffd234;
 }
 /* ==================================
  * FONT DEFINING SELECTORS
@@ -38,77 +38,77 @@
  * s3 navigation items
  * s4 header
  * s5 header */
-h2{
-    font-family: var(--font-family-condensed);
-    font-size: var(--font-size-xlarge);
-    color: var(--color-text);
-    -webkit-text-stroke: 1px var(--color-text);
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+h2 {
+  font-family: var(--font-family-condensed);
+  font-size: var(--font-size-xlarge);
+  color: var(--color-text);
+  -webkit-text-stroke: 1px var(--color-text);
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* s3 card text
  * s4 artist names */
-h3{
-    font-family: var(--font-family-black);
-    font-size: var(--font-size-large);
-    color: var(--color-text);
-    -webkit-text-stroke: 1px var(--color-text);
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+h3 {
+  font-family: var(--font-family-black);
+  font-size: var(--font-size-large);
+  color: var(--color-text);
+  -webkit-text-stroke: 1px var(--color-text);
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* s1 card date
  * s3 card date
  * s5 title
  * footer */
-h4{
-    font-family: var(--font-family-condensed);
-    font-size: var(--font-size-small);
-    color: var(--color-text);
-    -webkit-text-stroke: 1px var(--color-text);
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+h4 {
+  font-family: var(--font-family-condensed);
+  font-size: var(--font-size-small);
+  color: var(--color-text);
+  -webkit-text-stroke: 1px var(--color-text);
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* s1 card heading
  * s5 price */
-h5{
-    font-family: var(--font-family-black);
-    font-size: var(--font-size-small);
-    color: var(--color-text);
+h5 {
+  font-family: var(--font-family-black);
+  font-size: var(--font-size-small);
+  color: var(--color-text);
 }
 /* s1 card text */
-.card-text{
-    font-family: var(--font-family-roman);
-    font-size: var(--font-size-standard);
-    color: var(--color-text);
+.card-text {
+  font-family: var(--font-family-roman);
+  font-size: var(--font-size-standard);
+  color: var(--color-text);
 }
 /* ==================================
  * text modifier classes
  * ================================== */
 /* nav-bar cart amount of items, used with h4 */
-.--text-colored{
-    color: var(--color-bg);
+.--text-colored {
+  color: var(--color-bg);
 }
 /* this one is used everywhere where we want the text to turn to just outline on hover */
-.--hover-outline:hover{
-    color:transparent;
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+.--hover-outline:hover {
+  color: transparent;
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* this one is for text that is by default just the outline*/
-.--outline{
-    color:transparent;
-    -webkit-text-stroke: 1px var(--color-text);
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+.--outline {
+  color: var(--color-bg);
+  -webkit-text-stroke: 1px var(--color-text);
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* this is to make that text black again on hover*/
-.--outline:hover{
-    color:var(--color-text);
-    transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
+.--outline:hover {
+  color: var(--color-text);
+  transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
 }
 /* ==================================
  * SECTIONS
  * ================================== */
 /* footer */
-footer{
-    background-color: var(--color-bg);
-    display:flex;
+footer {
+  background-color: var(--color-bg);
+  display: flex;
 }
-.footer-div{
-    width: 50%;
+.footer-div {
+  width: 50%;
 }
