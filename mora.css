@@ -79,7 +79,7 @@ h5{
     color: var(--color-text);
 }
 /* ==================================
- * text modifier classes
+ * font modifier classes
  * ================================== */
 /* nav-bar cart amount of items, used with h4 */
 .--text-colored{
@@ -102,13 +102,35 @@ h5{
     transition: color .5s ease-in-out,-webkit-text-stroke .5s ease-in-out;
 }
 /* ==================================
+ * makes all text black background with yellow letters on selection
+ * ================================== */
+::-moz-selection { /* Code for Firefox */
+    color: var(--color-bg);
+    background-color: var(--color-text);
+  } 
+::selection {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+  }
+/* ==================================
  * SECTIONS
  * ================================== */
 /* footer */
 footer{
     background-color: var(--color-bg);
     display:flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
 }
 .footer-div{
-    width: 50%;
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+.--flex-align-right{
+    align-items: end;
+}
+.--align-text-right{
+    text-align: right;
 }
